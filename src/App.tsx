@@ -25,13 +25,10 @@ export default function App() {
                 onClick={() =>
                   setField(x, y, getCell(x, y) === 'live' ? 'dead' : 'live')
                 }
-                className={clsx(
-                  'w-8 h-8 hover:cursor-pointer hover:bg-gray-300',
-                  {
-                    'bg-gray-200': cell === 'dead',
-                    'bg-green-500': cell === 'live',
-                  }
-                )}
+                className={clsx('w-8 h-8 hover:cursor-pointer', {
+                  'bg-gray-200 hover:bg-gray-300': cell === 'dead',
+                  'bg-green-500 hover:bg-green-400': cell === 'live',
+                })}
               />
             ))}
           </div>
